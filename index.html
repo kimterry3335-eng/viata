@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Love - Viata❤️</title>
+ <link rel="icon" type="image/png" href="viata.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    /* Keep the page dark while the photo sits subtly behind everything */
+    background:#220713;
+
+    position:relative;
+}
+
+
+/* =========================================
+   DARK PINK GLOW
+========================================= */
+
+/* =========================================
+   SUBTLE BACKGROUND PHOTO
+========================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    /* Fixed background image syntax error */
+    background-image: url("louisa.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    /* Increased darkness / pink overlay to make background image much more hidden */
+    background: rgba(35, 4, 18, 0.88);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.page{
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:35px 45px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+.main{
+
+    width:100%;
+
+    max-width:1050px;
+
+    display:grid;
+
+    grid-template-columns:43% 57%;
+
+    align-items:center;
+
+    gap:28px;
+}
+
+
+
+/* =========================================
+   LEFT PHOTO
+========================================= */
+
+.photo-area{
+
+    width:100%;
+
+    height:650px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+    position:relative;
+}
+
+
+.photo{
+
+    width:100%;
+
+    max-width:440px;
+
+    height:640px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:22px;
+
+    filter:
+        drop-shadow(
+            0 12px 35px
+            rgba(255,0,80,.45)
+        );
+
+    animation:photoFloat 5s ease-in-out infinite;
+
+    mix-blend-mode:normal;
+}
+
+
+/* =========================================
+   PINK COLOUR OVER THE PHOTO
+========================================= */
+
+.photo-area::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    max-width:440px;
+
+    height:640px;
+
+   background: rgba(45,8,20,.60);
+    border-radius:22px;
+
+    pointer-events:none;
+}
+
+
+@keyframes photoFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.content{
+
+    text-align:center;
+
+    width:100%;
+
+    padding:5px 10px;
+}
+
+
+/* =========================================
+   TOP TEXT
+========================================= */
+
+.top-text{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:25px;
+
+    color:#ffd9e5;
+
+    margin-bottom:0;
+
+    text-shadow:
+        0 0 8px rgba(255,100,150,.5);
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.name{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:100px;
+
+    line-height:.95;
+
+    color:#ffb5ca;
+
+    margin:0;
+
+    text-shadow:
+
+        0 0 5px #fff,
+
+        0 0 10px #ff8aaa,
+
+        0 0 20px #ff4d83,
+
+        0 0 40px #ff1765,
+
+        0 0 65px rgba(255,0,80,.7);
+
+    animation:nameGlow 2s infinite alternate;
+}
+
+
+.name::after{
+
+    content:" ♥";
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:22px;
+
+    color:#ff79a1;
+
+}
+
+
+@keyframes nameGlow{
+
+    from{
+
+        text-shadow:
+
+            0 0 5px white,
+
+            0 0 12px #ff7fa5,
+
+            0 0 25px #ff3e78;
+
+    }
+
+    to{
+
+        text-shadow:
+
+            0 0 8px white,
+
+            0 0 18px #ff7fa5,
+
+            0 0 35px #ff3e78,
+
+            0 0 60px #ff1765;
+    }
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.subtitle{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:22px;
+
+    color:#ffe4eb;
+
+    margin-top:5px;
+}
+
+
+/* =========================================
+   OPEN HEART BUTTON
+========================================= */
+
+.open-btn{
+
+    margin:17px auto 12px;
+
+    padding:9px 27px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c92859,
+            #ef4d7d
+        );
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:12px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 5px 20px
+        rgba(255,30,100,.5);
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+.open-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transition:.5s;
+}
+
+
+.open-btn:hover::before{
+    left:100%;
+}
+
+
+.open-btn:hover{
+
+    transform:scale(1.07);
+
+    box-shadow:
+        0 8px 30px
+        rgba(255,30,100,.75);
+}
+
+
+/* =========================================
+   MESSAGE BOX
+========================================= */
+
+.message-box{
+
+    width:100%;
+
+    padding:15px 22px;
+
+    border-radius:14px;
+
+    background:
+        rgba(45,7,25,.42);
+
+    border:
+        1px solid
+        rgba(255,100,150,.42);
+
+    box-shadow:
+
+        inset 0 0 20px
+        rgba(255,40,100,.06),
+
+        0 5px 20px
+        rgba(0,0,0,.15);
+
+    backdrop-filter:blur(3px);
+}
+
+
+.message-title{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:27px;
+
+    color:#ffb4cb;
+
+    margin-bottom:5px;
+}
+
+
+.message{
+
+    font-size:10px;
+
+    line-height:1.6;
+
+    color:#f7e4e9;
+}
+
+
+.highlight{
+
+    color:#ff729a;
+
+    font-weight:500;
+
+    text-shadow:
+        0 0 8px rgba(255,50,100,.3);
+}
+
+
+/* =========================================
+   FOUR CARDS
+========================================= */
+
+.cards{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin-top:10px;
+
+    border:
+        1px solid
+        rgba(255,100,150,.35);
+
+    border-radius:13px;
+
+    overflow:hidden;
+
+    background:
+        rgba(35,4,18,.25);
+}
+
+
+.card{
+
+    min-height:102px;
+
+    padding:12px 6px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    background:
+        rgba(40,5,20,.28);
+
+    border-right:
+        1px solid
+        rgba(255,100,150,.25);
+
+    transition:.3s;
+}
+
+
+.card:last-child{
+    border-right:none;
+}
+
+
+.card:hover{
+
+    background:
+        rgba(255,40,100,.16);
+
+    transform:translateY(-3px);
+}
+
+
+.card-icon{
+
+    font-size:23px;
+
+    line-height:1;
+
+    color:#ff6092;
+
+    margin-bottom:7px;
+
+    text-shadow:
+        0 0 10px #ff326e;
+}
+
+
+.card-title{
+
+    font-size:8px;
+
+    font-weight:500;
+
+    margin-bottom:6px;
+
+    white-space:nowrap;
+}
+
+
+.card-text{
+
+    font-size:7px;
+
+    line-height:1.45;
+
+    color:#dec7d0;
+
+    max-width:80px;
+}
+
+
+/* =========================================
+   MUSIC BAR
+========================================= */
+
+.music{
+
+    width:100%;
+
+    height:39px;
+
+    margin-top:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:0 13px;
+
+    border-radius:25px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(179,27,72,.88),
+            rgba(116,15,50,.82)
+        );
+
+    border:
+        1px solid
+        rgba(255,100,150,.35);
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.15);
+}
+
+
+.music-note{
+
+    font-size:16px;
+}
+
+
+.song{
+
+    flex:1;
+
+    text-align:left;
+
+    font-size:8px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+
+.controls{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+}
+
+
+.controls button{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    transition:.2s;
+}
+
+
+.controls button:hover{
+
+    color:#ff9ebb;
+
+    transform:scale(1.15);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+
+    margin-top:10px;
+
+    font-size:8px;
+
+    line-height:1.6;
+
+    color:#e4ccd4;
+
+}
+
+
+.footer span{
+    color:#ff739b;
+}
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-40px;
+
+    color:#ff5a8b;
+
+    font-size:18px;
+
+    pointer-events:none;
+
+    z-index:50;
+
+    animation:
+        rise 7s linear forwards;
+
+    text-shadow:
+        0 0 8px #ff316f;
+}
+
+
+@keyframes rise{
+
+    0%{
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(.5);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.4);
+
+        opacity:0;
+    }
+}
+
+
+/* =========================================
+   POPUP
+========================================= */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        rgba(25,0,10,.85);
+
+    backdrop-filter:blur(9px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:100;
+}
+
+
+.popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+
+.popup-content{
+
+    width:90%;
+
+    max-width:450px;
+
+    text-align:center;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #68102f,
+            #240514
+        );
+
+    border:
+        1px solid
+        rgba(255,120,160,.5);
+
+    box-shadow:
+        0 0 50px
+        rgba(255,20,100,.5);
+
+    transform:scale(.7);
+
+    transition:.4s;
+}
+
+
+.popup.show .popup-content{
+
+    transform:scale(1);
+}
+
+
+.popup-heart{
+
+    font-size:55px;
+
+    animation:beat 1s infinite;
+}
+
+
+@keyframes beat{
+
+    50%{
+        transform:scale(1.25);
+    }
+}
+
+
+.popup h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#ff9fbd;
+}
+
+
+.popup p{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:20px;
+
+    line-height:1.6;
+
+    color:#ffe0e9;
+}
+
+
+.close{
+
+    margin-top:20px;
+
+    padding:9px 25px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#df3267;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media(max-width:850px){
+
+    .page{
+        padding:25px;
+    }
+
+    .main{
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:20px;
+    }
+
+    .photo-area{
+        height:570px;
+    }
+
+    .photo{
+        height:550px;
+    }
+
+    .name{
+        font-size:75px;
+    }
+
+    .top-text{
+        font-size:21px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE PHONE
+========================================= */
+
+@media(max-width:650px){
+
+    body{
+        background-attachment:scroll;
+    }
+
+    .page{
+
+        padding:20px 14px;
+
+        align-items:flex-start;
+    }
+
+    .main{
+
+        grid-template-columns:1fr;
+
+        gap:8px;
+
+        max-width:500px;
+    }
+
+    .photo-area{
+
+        height:390px;
+
+        order:1;
+    }
+
+    .photo{
+
+        height:380px;
+
+        width:290px;
+
+        max-width:290px;
+
+        border-radius:20px;
+    }
+
+    .content{
+
+        order:2;
+
+        padding:0;
+    }
+
+    .top-text{
+        font-size:22px;
+    }
+
+    .name{
+        font-size:72px;
+    }
+
+    .subtitle{
+        font-size:20px;
+    }
+
+    .message-box{
+        padding:14px 18px;
+    }
+
+    .cards{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .card{
+
+        min-height:95px;
+    }
+
+    .card:nth-child(2){
+        border-right:none;
+    }
+
+    .card:nth-child(1),
+    .card:nth-child(2){
+        border-bottom:
+            1px solid
+            rgba(255,100,150,.25);
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media(max-width:400px){
+
+    .photo-area{
+        height:330px;
+    }
+
+    .photo{
+
+        height:320px;
+
+        width:250px;
+    }
+
+    .name{
+        font-size:60px;
+    }
+
+    .top-text{
+        font-size:20px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+    .message{
+        font-size:9px;
+    }
+
+    .card-title{
+        font-size:7px;
+    }
+
+    .card-text{
+        font-size:6px;
+    }
+
+}
+
+
+/* =========================================
+   HIDE SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+    width:5px;
+}
+
+::-webkit-scrollbar-track{
+    background:#210512;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#a92b55;
+    border-radius:10px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     MAIN PAGE
+========================================= -->
+
+<div class="page">
+
+<div class="main">
+
+
+<!-- =========================================
+     PHOTO
+========================================= -->
+
+<div class="photo-area">
+
+    <img
+        class="photo"
+        src="viata.jpeg"
+        alt="Louisa"
+    >
+
+</div>
+
+
+<!-- =========================================
+     CONTENT
+========================================= -->
+
+<div class="content">
+
+
+<div class="top-text">
+    For My Love ❤️
+</div>
+
+
+<div class="name">
+    Viata
+
+
+<div class="subtitle">
+    You mean the world to me
+</div>
+
+
+<button
+    class="open-btn"
+    onclick="openHeart()">
+
+    Open My Heart ❤️
+
+</button>
+
+
+<!-- =========================================
+     LOVE MESSAGE
+========================================= -->
+
+<div class="message-box">
+
+    <div class="message-title">
+        My Love,
+    </div>
+
+    <div class="message">
+
+        Every day with you is a blessing.<br>
+
+        Your smile brightens my darkest days,<br>
+
+        your presence calms my heart,<br>
+
+        and your love completes me.
+
+        <br>
+
+        <span class="highlight">
+            I love you more than words can say.
+        </span>
+
+        <br>
+
+        Forever yours,<br>
+
+        Kevin ❤️
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     LOVE CARDS
+========================================= -->
+
+<div class="cards">
+
+
+<div class="card">
+
+    <div class="card-icon">
+        ♡
+    </div>
+
+    <div class="card-title">
+        You're My Happiness
+    </div>
+
+    <div class="card-text">
+        You make my world a better place.
+    </div>
+
+</div>
+
+
+<div class="card">
+
+    <div class="card-icon">
+        ♡
+    </div>
+
+    <div class="card-title">
+        You're My Forever
+    </div>
+
+    <div class="card-text">
+        No matter what happens, I'm yours.
+    </div>
+
+</div>
+
+
+<div class="card">
+
+    <div class="card-icon">
+        ☆
+    </div>
+
+    <div class="card-title">
+        You're My Inspiration
+    </div>
+
+    <div class="card-text">
+        You motivate me to become better.
+    </div>
+
+</div>
+
+
+<div class="card">
+
+    <div class="card-icon">
+        ♡
+    </div>
+
+    <div class="card-title">
+        You're My Safe Place
+    </div>
+
+    <div class="card-text">
+        With you, I can be myself.
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================================
+     MUSIC
+========================================= -->
+
+<div class="music">
+
+    <div class="music-note">
+        🎵
+    </div>
+
+    <div class="song">
+        Because You Loved Me — Perfect
+    </div>
+
+    <div class="controls">
+
+        <button onclick="restartSong()">
+            ◀
+        </button>
+
+        <button
+            id="play"
+            onclick="toggleMusic()">
+
+            ▶
+
+        </button>
+
+        <button onclick="restartSong()">
+            ▶
+        </button>
+
+    </div>
+
+</div>
+
+
+<audio id="audio">
+
+    <source
+        src="love.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<div class="footer">
+
+    Kevin ❤️ Viata
+
+    <br>
+
+    I will always choose you.
+    Today, tomorrow, and forever.
+
+    <span>❤️</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================
+     POPUP
+========================================= -->
+
+<div
+    class="popup"
+    id="popup">
+
+    <div class="popup-content">
+
+        <div class="popup-heart">
+            ❤️
+        </div>
+
+        <h2>
+            My Heart
+        </h2>
+
+        <p>
+
+            If I had to choose again,
+            I would still choose you.
+
+            <br><br>
+
+            You are my happiness,
+            my peace,
+            my favorite person,
+            and my forever.
+
+            <br><br>
+
+            I love you, Viata ❤️
+
+        </p>
+
+        <button
+            class="close"
+            onclick="closeHeart()">
+
+            Close
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    const symbols = [
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "💓"
+    ];
+
+    heart.innerHTML =
+        symbols[
+            Math.floor(
+                Math.random() *
+                symbols.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    },10000);
+
+}
+
+
+setInterval(createHeart,600);
+
+
+/* =========================================
+   OPEN HEART
+========================================= */
+
+function openHeart(){
+
+    document
+        .getElementById("popup")
+        .classList.add("show");
+
+}
+
+
+/* =========================================   CLOSE HEART
+========================================= */
+
+function closeHeart(){
+
+    document
+        .getElementById("popup")
+        .classList.remove("show");
+
+}
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+const audio =
+    document.getElementById("audio");
+
+const play =
+    document.getElementById("play");
+
+
+function toggleMusic(){
+
+    if(audio.paused){
+
+        audio.play();
+
+        play.innerHTML = "❚❚";
+
+    }
+
+    else{
+
+        audio.pause();
+
+        play.innerHTML = "▶";
+
+    }
+
+}
+
+
+function restartSong(){
+
+    audio.currentTime = 0;
+
+    audio.play();
+
+    play.innerHTML = "❚❚";
+
+}
+
+
+audio.addEventListener(
+    "ended",
+    function(){
+
+        play.innerHTML = "▶";
+
+    }
+);
+
+</script>
+
+</body>
+</html>
